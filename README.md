@@ -72,14 +72,14 @@ See [Codex skills](https://developers.openai.com/codex/build-skills.md).
 Official `/poteto-mode` and other Cursor slash commands are not registered by
 this installer. Ask Codex to use the adapter and read the named official skill.
 
-Manually append this short snippet to the applicable `AGENTS.md` if desired.
-The installer never creates or edits that file:
+Optionally append [examples/AGENTS.md](examples/AGENTS.md) to the applicable
+`AGENTS.md` if desired. That file is an optional example of lines for
+`~/.codex/AGENTS.md`: the pstack loading rules plus an optional personal
+task-list workflow. The installer never creates or edits `AGENTS.md`, so
+appending is up to you:
 
-```md
-For nontrivial development, investigation, or review, load $pstack-codex first.
-Read its MAPPING.md and the full pinned official poteto-mode skill before work.
-Preserve existing repository rules, user scope, permissions, and approval gates.
-If delegation is unavailable, work sequentially and report unmet required gates.
+```sh
+curl -fsSL https://raw.githubusercontent.com/ohtori222/pstack-codex/main/examples/AGENTS.md >> ~/.codex/AGENTS.md
 ```
 
 Review [MAPPING.md](codex/pstack-codex/MAPPING.md) for tool translations,
